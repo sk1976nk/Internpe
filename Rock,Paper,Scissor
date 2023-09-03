@@ -1,0 +1,38 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class random {
+    public static void main(String[] args){
+        //int rock=0;
+        //int paper=1;
+        //scissor=2;
+        Scanner sc = new Scanner(System.in);
+        int userinput=sc.nextInt();
+
+        Random rnd = new Random();
+        int computerinput= rnd.nextInt(3);
+
+        if(computerinput==userinput){
+            System.out.println(" Draw or no one wins or no one loss");
+        }
+
+        else if (computerinput==0&& userinput==1 ||computerinput==1 && userinput==2 ||computerinput==2&& userinput==1){
+            System.out.println("Human wins");
+        }
+        else{
+            System.out.println("Computer wins");
+        }
+        System.out.println("Computer choice is" +computerinput);
+        if(computerinput==0){
+            System.out.println("Computer choice is rock" );
+        }
+        else if(computerinput==1){
+            System.out.println("Computer choice is paper");
+        }
+        else{
+            System.out.println("computer choice is scissor");
+        }
+    }
+}
